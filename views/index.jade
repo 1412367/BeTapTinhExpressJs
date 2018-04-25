@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  h1 BÉ TẬP TÍNH
+    form#main_form(method='POST', action='/')
+      table
+        tr
+          td(width='20%') Số thứ nhất
+          td
+            input(type='number', name='sothunhat', onblur='checkTextField(this);', onchange='clearResult()', value=sothunhat)
+          td(width='15%')
+            input(type='radio', name='toantu', value='cong', checked='', onchange='clearResult()')
+            |  Cộng
+            br
+          td(width='15%')
+            input(type='radio', name='toantu', value='tru', checked=vuatinhtru, onchange='clearResult()')
+            |  Trừ
+            br
+        tr
+          td Số thứ hai
+          td
+            input(type='number', name='sothuhai', onblur='checkTextField(this);', onchange='clearResult()', value=sothuhai)
+          td
+            input(type='radio', name='toantu', value='nhan', checked=vuatinhnhan, onchange='clearResult()')
+            |  Nhân
+            br
+          td
+            input(type='radio', name='toantu', value='chia', checked=vuatinhchia, onchange='clearResult()')
+            |  Chia
+            br
+        tr
+          td Kết quả
+          td
+            input#ketqua(type='number', disabled='' value=ketqua)
+          td
+            button(type='submit') Tính
+        tr
+          td Thông báo:
+          td#thongbao(colspan='3') #{thongbao}

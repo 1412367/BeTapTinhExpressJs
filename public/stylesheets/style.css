@@ -1,0 +1,23 @@
+h1 {
+  text-align: center;
+}
+table {
+  width: 35%;
+  margin: auto
+}
+input[type=number] {
+  width: 95%;
+  text-align: right;
+}
+
+#thongbao {
+  color: red;
+}
+
+input:disabled {
+  background-color: rgb(228, 228, 228);
+}
+
+button {
+ margin-left: 10px;
+}
